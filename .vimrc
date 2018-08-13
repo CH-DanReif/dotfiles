@@ -1,5 +1,5 @@
 " short term fix for vim-polyglot's graphql_js_tags plugin
-let g:graphql_javascript_tags = []
+"let g:graphql_javascript_tags = []
 
 " short term fix for deprecation warnings in ycm
 silent! py3 pass
@@ -29,7 +29,7 @@ set wildmode=longest:full,full
 "colour settings
 syntax enable
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 " this is needed for mouse to control panes in tmux - see https://superuser.com/questions/549930/cant-resize-vim-splits-inside-tmux
 set ttymouse=xterm2
@@ -57,36 +57,36 @@ autocmd FileChangedShellPost *
 
 " set the runtime path to include Vundle and initialize
 set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim' "required
-Plugin 'rizzatti/dash.vim' "enables :Dash lookups
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'altercation/vim-colors-solarized' "not doing it for me!
-Plugin 'christoomey/vim-tmux-navigator' "When combined with a set of tmux key bindings, navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
-"LANGUAGE TOOLS
-Plugin 'scrooloose/syntastic'
-Plugin 'sheerun/vim-polyglot' "bundles other language syntax plugins for many lanuages(pangloss/vim-javascript, [vim-jsx] for js
-Plugin 'tpope/vim-surround' "mappings to delete/change/add parentheses, brackets, quotes, XML tags, etc in pairs. View the manual with :help surround
-Plugin 'tpope/vim-repeat' "enables '.' to repeat for vim-sourround and others
-Plugin 'Valloric/YouCompleteMe', { 'do' : '~/.vim/bundle/YouCompleteMe/./install.py --tern-completer' }
-Plugin 'szw/vim-maximizer' "F3 will toggle fullscreen of the current window, useful as otherwise there's only ctrl+w_, ctrl+w| and ctrl+w=, all imperfect 
-Plugin 'ruanyl/vim-gh-line' "<leader>gh to open the line of this file it github
-"JS SPECIFIC -  see https://davidosomething.com/blog/vim-for-javascript/
-Plugin 'ternjs/tern_for_vim', { 'do': 'npm install' } 
-Plugin 'elzr/vim-json' "You're advised to look at its options
-Plugin 'othree/yajs.vim', { 'for': 'javascript' } "a fork of jelera/vim-javascript-syntax, neither have custom indent settings, updated very often. The {} makes sure the syntax plugin is loaded in a Vim autocommand based on filetype detection (as opposed to relying on Vim's runtimepath based sourcing mechanism. Then the main Vim syntax plugin will have already run, and this syntax will override it.
-Plugin 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } "syntax highlighting: picks out function scopes.  may not color your code when incomplete (i.e., syntax not yet valid). can be used in combination with any of the above
-Plugin 'othree/javascript-libraries-syntax.vim' "highlighting of functions+keywords for various libs such as jQuery, lodash, React, Handlebars, Chai, etc.
-Plugin '1995eaton/vim-better-javascript-completion' "somewhat up-to-date JavaScript (HTML5 methods e.g. localStorage and canvas methods). creates new omni-completion function: js#CompleteJS and replaces your current JS omnifunc with it, so you have to use a completion plugin or write some VimL, to use it in conjunction with another omnifunc like TernJS
-Plugin 'othree/jspc.vim' "JavaScript Parameter Complete detects when you're inside a function argument and provides autocomplete suggestions (TernJS only adds existing symbols) So if you're writing an event listener, it'll suggest click and mouseover. You can see all the suggestions it provides in its GitHub source. On load, the jspc.vim plugin automatically detects whatever omnifunc you already have set as your default. It wraps it with the parameter completion, and falls back to your default if you are not in a parameter completion. Because of this you should specify jspc#omni instead of whatever your default completion is (typically javascriptcomplete#CompleteJS)
-Plugin 'moll/vim-node' "adds keybindings like for jumping to files in your CommonJS require statements
-Plugin 'tpope/vim-obsession' "make Session.vim files, tmux resurrect can try and restore them
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
+"call vundle#begin()
+"Plugin 'gmarik/Vundle.vim' "required
+"Plugin 'rizzatti/dash.vim' "enables :Dash lookups
+"Plugin 'bling/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'altercation/vim-colors-solarized' "not doing it for me!
+"Plugin 'christoomey/vim-tmux-navigator' "When combined with a set of tmux key bindings, navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
+""LANGUAGE TOOLS
+"Plugin 'scrooloose/syntastic'
+"Plugin 'sheerun/vim-polyglot' "bundles other language syntax plugins for many lanuages(pangloss/vim-javascript, [vim-jsx] for js
+"Plugin 'tpope/vim-surround' "mappings to delete/change/add parentheses, brackets, quotes, XML tags, etc in pairs. View the manual with :help surround
+"Plugin 'tpope/vim-repeat' "enables '.' to repeat for vim-sourround and others
+"Plugin 'Valloric/YouCompleteMe', { 'do' : '~/.vim/bundle/YouCompleteMe/./install.py --tern-completer' }
+"Plugin 'szw/vim-maximizer' "F3 will toggle fullscreen of the current window, useful as otherwise there's only ctrl+w_, ctrl+w| and ctrl+w=, all imperfect 
+"Plugin 'ruanyl/vim-gh-line' "<leader>gh to open the line of this file it github
+""JS SPECIFIC -  see https://davidosomething.com/blog/vim-for-javascript/
+"Plugin 'ternjs/tern_for_vim', { 'do': 'npm install' } 
+"Plugin 'elzr/vim-json' "You're advised to look at its options
+"Plugin 'othree/yajs.vim', { 'for': 'javascript' } "a fork of jelera/vim-javascript-syntax, neither have custom indent settings, updated very often. The {} makes sure the syntax plugin is loaded in a Vim autocommand based on filetype detection (as opposed to relying on Vim's runtimepath based sourcing mechanism. Then the main Vim syntax plugin will have already run, and this syntax will override it.
+"Plugin 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } "syntax highlighting: picks out function scopes.  may not color your code when incomplete (i.e., syntax not yet valid). can be used in combination with any of the above
+"Plugin 'othree/javascript-libraries-syntax.vim' "highlighting of functions+keywords for various libs such as jQuery, lodash, React, Handlebars, Chai, etc.
+"Plugin '1995eaton/vim-better-javascript-completion' "somewhat up-to-date JavaScript (HTML5 methods e.g. localStorage and canvas methods). creates new omni-completion function: js#CompleteJS and replaces your current JS omnifunc with it, so you have to use a completion plugin or write some VimL, to use it in conjunction with another omnifunc like TernJS
+"Plugin 'othree/jspc.vim' "JavaScript Parameter Complete detects when you're inside a function argument and provides autocomplete suggestions (TernJS only adds existing symbols) So if you're writing an event listener, it'll suggest click and mouseover. You can see all the suggestions it provides in its GitHub source. On load, the jspc.vim plugin automatically detects whatever omnifunc you already have set as your default. It wraps it with the parameter completion, and falls back to your default if you are not in a parameter completion. Because of this you should specify jspc#omni instead of whatever your default completion is (typically javascriptcomplete#CompleteJS)
+"Plugin 'moll/vim-node' "adds keybindings like for jumping to files in your CommonJS require statements
+"Plugin 'tpope/vim-obsession' "make Session.vim files, tmux resurrect can try and restore them
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'Xuyuanp/nerdtree-git-plugin'
+"Plugin 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
 
-call vundle#end() " All of your Plugins must be added before the following line
+"call vundle#end() " All of your Plugins must be added before the following line
 
 " to disable individual plugins try "set runtimepath?" to show you path then
 " paste it as here:
@@ -144,11 +144,11 @@ let g:javascript_enable_domhtmlcss = 1 "Enables HTML/CSS syntax highlighting in 
 "set foldmethod=syntax "Enables code folding based on our syntax file - dramatic effect on performance and global vim option. we do not set it ourselves
 
 "vim obesssion
-set statusline+=%{ObsessionStatus()}
+"set statusline+=%{ObsessionStatus()}
 
 " syntastic options
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 "let g:syntastic_always_populate_loc_list = 1 "now causes a blank startup
 let g:syntastic_auto_loc_list = 1
@@ -178,7 +178,7 @@ nnoremap <leader>h :JSContextColor<CR>
 autocmd VimEnter * wincmd p " Jump to the main window
 "start when vim starts even if you didn't say a file
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "close vim if the only window left open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeShowHidden=1 "show hidden files by default
@@ -186,4 +186,3 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 "we want ctrl+j/k to navigate tmux on every window, so remap these to option+j/k
 let NERDTreeMapJumpNextSibling='∆'
 let NERDTreeMapJumpPrevSibling='˚'
-
